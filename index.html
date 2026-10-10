@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ski février 2027</title>
+</head>
+<body>
+<title>Ski février 2027</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f2f5f7; --surface:#ffffff; --ink:#13242c; --muted:#56666e; --line:#d5dde2;
+  --accent:#0b5f8a; --accent-soft:#e1eef5;
+  --vert:#1c7a45; --bleu:#1f5fbf; --rouge:#c2362b;
+  --disp:"Barlow Condensed","Inter Display","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow","Inter","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1a20; --surface:#17252d; --ink:#e8eef1; --muted:#9aabb3; --line:#2b3c45;
+  --accent:#6bb8e0; --accent-soft:#1c3340;
+  --vert:#4cc07f; --bleu:#74a6f2; --rouge:#f0796e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1a20; --surface:#17252d; --ink:#e8eef1; --muted:#9aabb3; --line:#2b3c45;
+  --accent:#6bb8e0; --accent-soft:#1c3340;
+  --vert:#4cc07f; --bleu:#74a6f2; --rouge:#f0796e; color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:940px;margin:0 auto;padding-inline:16px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:2.6rem;letter-spacing:.01em} h2{font-size:1.6rem} h3{font-size:1.35rem}
+p{margin:0} a{color:var(--accent)}
+.eyebrow{font-family:var(--disp);text-transform:uppercase;letter-spacing:.09em;font-size:.95rem;color:var(--muted);font-weight:500}
+header{display:flex;flex-direction:column;gap:10px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 22px;color:var(--muted)} .facts b{color:var(--ink);font-weight:600}
+.lead{max-width:68ch}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:inherit;font-size:.92rem;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:600}
+.chip:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+select{font:inherit;font-size:.92rem;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.count{color:var(--muted);font-size:.92rem;margin-left:auto}
+.list{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-wrap:wrap}
+.card .ph{flex:0 0 230px;min-height:170px;background:var(--accent-soft)}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;max-width:100%}
+.card .in{flex:1 1 380px;min-width:0;padding:16px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;align-content:start}
+.head{min-width:0;display:flex;flex-direction:column;gap:2px}
+.where{color:var(--muted);font-size:.95rem}
+.price{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price .tot{font-family:var(--disp);font-size:1.7rem;font-weight:700;line-height:1}
+.price .pp{color:var(--muted);font-size:.88rem}
+.price .over{color:var(--rouge);font-size:.82rem;font-weight:600}
+.meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.93rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.meta b{color:var(--ink);font-weight:600}
+.body{grid-column:1/-1;display:flex;flex-direction:column;gap:4px;font-size:.96rem;max-width:74ch}
+.body .k{font-weight:600}
+.foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.9rem;padding-top:4px}
+.piste{display:inline-flex;align-items:center;gap:7px;font-weight:600}
+.piste i{width:12px;height:12px;border-radius:50%;display:inline-block;background:currentColor}
+.p1{color:var(--vert)} .p2{color:var(--bleu)} .p3{color:var(--rouge)}
+.tag{font-size:.8rem;padding:2px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.rank{font-family:var(--disp);font-weight:700;font-size:1.05rem;letter-spacing:.02em;color:var(--bg);background:var(--ink);border-radius:6px;padding:2px 8px;margin-right:9px;vertical-align:2px;white-space:nowrap}
+.foot a{margin-left:auto;font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.92rem}
+.tblwrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.94rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 12px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--disp);font-weight:600;font-size:1rem;letter-spacing:.03em;color:var(--muted);text-transform:uppercase}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:74ch}
+section{display:flex;flex-direction:column;gap:12px}
+.note{color:var(--muted);font-size:.93rem;max-width:74ch}
+[hidden]{display:none!important}
+@media screen and (max-width:640px){h1{font-size:2.1rem}.card .ph{flex:1 1 100%;height:190px;min-height:0}.card .in{grid-template-columns:minmax(0,1fr)}.price{text-align:left}.foot a{margin-left:0}.count{margin-left:0;width:100%}}
+.printonly{display:none}
+@page{size:A5;margin:9mm 8mm}
+@media print{
+  :root,:root[data-theme="dark"],:root:not([data-theme="light"]){--bg:#ffffff;--surface:#ffffff;--ink:#13242c;--muted:#56666e;--line:#c9d2d8;--accent:#0b5f8a;--accent-soft:#e1eef5;--vert:#1c7a45;--bleu:#1f5fbf;--rouge:#c2362b;color-scheme:light;--disp:Arial,"Liberation Sans","DejaVu Sans",sans-serif;--body:Arial,"Liberation Sans","DejaVu Sans",sans-serif}
+  body{font-size:10pt;line-height:1.4}
+  .wrap{max-width:none;padding:0;display:block}
+  header,section,.list{display:block}
+  header>*,section>*{margin-bottom:8px}
+  section{margin-top:18px}
+  h1{font-size:19pt} h2{font-size:14pt;break-after:avoid} h3{font-size:11.5pt}
+  .eyebrow{font-size:8.5pt}
+  .controls,.ph,.noprint{display:none!important}
+  .printonly{display:inline}
+  .card{display:block;break-inside:avoid;border-radius:6px;margin-bottom:9px}
+  .card .in{padding:10px 12px;gap:4px 12px;flex:1 1 auto}
+  .price .tot{font-size:15pt}
+  .body{font-size:9.6pt;max-width:none} .meta,.foot{font-size:9pt}
+  table{font-size:8.6pt} th{font-size:9pt} tr{break-inside:avoid}
+  ul{max-width:none} li{break-inside:avoid}
+  .foot a{text-decoration:underline}
+}
+</style>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Recherche de location · mise à jour du 10/10/2026</span>
+    <h1>Ski en famille, 20 – 27 février 2027</h1>
+    <div class="facts"><span><b>13 personnes</b> (6 adultes, 7 enfants de 11 à 17 ans)</span><span>Budget <b>7 500 €</b> la semaine</span><span>Grand domaine à <b>15 min max</b></span></div>
+    <p class="lead">21 locations disponibles sur ces dates, dont 19 sous le budget, à partir de 3 137 €. Elles sont classées par ordre de préférence : fiabilité de l'annonce, taille du domaine, distance aux pistes, puis confort. Chaque location garde le même numéro d'un jour à l'autre, même si le classement change.</p>
+  </header>
+  <section>
+    <h2>La sélection</h2>
+    <div class="legend"><span class="piste p1"><i></i>Verte : annonce éprouvée</span><span class="piste p2"><i></i>Bleue : un point à confirmer</span><span class="piste p3"><i></i>Rouge : à contrôler avant tout</span></div>
+    <div class="controls" id="controls" hidden>
+      <button class="chip" id="f-all" data-f="all" aria-pressed="true">Toutes</button>
+      <button class="chip" id="f-fav" data-f="fav" aria-pressed="false">Coups de cœur</button>
+      <button class="chip" id="f-bud" data-f="bud" aria-pressed="false">Dans le budget</button>
+      <label for="tri" class="note">Tri</label>
+      <select id="tri"><option value="rang">Préférence</option><option value="num">Numéro</option><option value="prix">Prix croissant</option><option value="dom">Domaine skiable</option></select>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="list" id="list">
+<article class="card" id="n1" data-rang="1" data-num="1"data-prix="5022" data-dom="Portes du Soleil" data-fav="1" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-47493545/original/3cc6cb9b-ff4e-4c9f-a0b9-dc19811a5fc3.jpeg?im_w=720" alt="Photo de l'annonce : Chalet « belles vues », 14 couchages" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;1</span>Chalet « belles vues », 14 couchages</h3><span class="where">Essert-Romand (Morzine) · Portes du Soleil</span></div>
+    <div class="price"><div class="tot">5 022 €</div><div class="pp">386 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>7</b> chambres</span><span><b>3</b> salles de bain</span><span><b>4,93/5</b> sur 76 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Morzine et ses remontées à 3 km</p>
+      <p><span class="k">Pour :</span> 7 chambres, chalet de 2021 en deux parties communicantes, une salle d&#x27;eau accessible. Hôte superhôte depuis 6 ans.</p>
+      <p><span class="k">Contre :</span> Prix affiché après remise semaine (7 011 € avant) : à surveiller. 3 salles de bain pour 13.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Coup de cœur</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/47493545" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n2" data-rang="2" data-num="2"data-prix="5853" data-dom="Portes du Soleil" data-fav="1" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/59000000/58840000/58831600/58831569/e0f5b806.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Chalet indépendant, jusqu&#x27;à 15 personnes" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;2</span>Chalet indépendant, jusqu&#x27;à 15 personnes</h3><span class="where">Châtel · Portes du Soleil</span></div>
+    <div class="price"><div class="tot">5 853 €</div><div class="pp">450 € par personne</div></div>
+    <div class="meta"><span><b>15</b> couchages</span><span><b>5</b> chambres</span><span><b>4</b> salles de bain</span><span><b>10/10</b> sur 10 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> À 1 km du centre de Châtel</p>
+      <p><span class="k">Pour :</span> Chalet familial loué par un particulier, 3 lits doubles + couchages enfants, 4 salles de bain, local à skis. Annulation gratuite jusqu&#x27;au 22 décembre.</p>
+      <p><span class="k">Contre :</span> 5 chambres seulement : les 7 enfants se répartissent dans 2 chambres et les lits superposés des chambres parentales.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Coup de cœur</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p1945938" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n3" data-rang="3" data-num="3"data-prix="6689" data-dom="Grand Massif" data-fav="1" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/d4a7c1fb-1bcb-423b-8da7-cd04c15873a8.jpg?im_w=720" alt="Photo de l'annonce : Chalet Célestine, sauna" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;3</span>Chalet Célestine, sauna</h3><span class="where">Verchaix (Morillon / Samoëns) · Grand Massif</span></div>
+    <div class="price"><div class="tot">6 689 €</div><div class="pp">515 € par personne</div></div>
+    <div class="meta"><span><b>15</b> couchages</span><span><b>6</b> chambres</span><span><b>4</b> salles de bain</span><span><b>4,93/5</b> sur 41 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Remontées de Morillon et Samoëns à 3–5 km</p>
+      <p><span class="k">Pour :</span> Chalet récent plein sud, 2 salles de jeux, sauna, parking 6 voitures. Hôte particulier depuis 10 ans, 119 évaluations. Existe aussi en version 14 personnes sans le studio à 6 567 € (annonce 15176222) et sur Abritel à 6 979 €.</p>
+      <p><span class="k">Contre :</span> Premier restaurant à 800 m, commerces à 3–5 km : voiture indispensable pour qui ne skie pas.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Coup de cœur</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/44059888" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n4" data-rang="4" data-num="4"data-prix="7957" data-dom="Paradiski" data-fav="1" data-bud="0">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-844046247199658845/original/f200fe77-f55a-43df-9fcf-0106ed46dd02.jpeg?im_w=720" alt="Photo de l'annonce : Chalet La Grande Motte, sauna" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;4</span>Chalet La Grande Motte, sauna</h3><span class="where">Champagny-le-Haut · Paradiski</span></div>
+    <div class="price"><div class="tot">7 957 €</div><div class="pp">612 € par personne</div><div class="over">+ 457 € sur le budget</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>8</b> chambres</span><span><b>5</b> salles de bain</span><span><b>4,88/5</b> sur 8 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Télécabine de Champagny à 7 min en voiture</p>
+      <p><span class="k">Pour :</span> 8 chambres sur 300 m², 5 salles de bain. Pistes de ski de fond et balades au pied du chalet, à l&#x27;entrée de la Vanoise : le meilleur cadre pour qui ne skie pas. Même prix sur Abritel et Booking (7 858 €).</p>
+      <p><span class="k">Contre :</span> Au-dessus du budget. Hameau isolé sur le plateau, route de montagne à faire chaque matin.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Coup de cœur</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/844046247199658845" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n5" data-rang="5" data-num="5"data-prix="4269" data-dom="Les 3 Vallées" data-fav="1" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/35000000/34410000/34404000/34403922/bb64f9c2.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Ferme savoyarde authentique" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;5</span>Ferme savoyarde authentique</h3><span class="where">Saint-Jean-de-Belleville · Les 3 Vallées</span></div>
+    <div class="price"><div class="tot">4 269 €</div><div class="pp">328 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>4</b> salles de bain</span><span><b>10/10</b> sur 1 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Pistes des 3 Vallées à environ 15 min en voiture (annonce)</p>
+      <p><span class="k">Pour :</span> Le plus grand domaine de la liste pour le prix le plus bas par personne. 4 salles de bain, 3 grands lits + chambres enfants.</p>
+      <p><span class="k">Contre :</span> Un seul avis et forte remise affichée (6 509 € → 4 269 €) : à confirmer par un message à l&#x27;hôte avant de s&#x27;emballer.</p>
+    </div>
+    <div class="foot"><span class="piste p2"><i></i>Bleue · à confirmer</span><span class="tag">Coup de cœur</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p1361745" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n6" data-rang="6" data-num="6"data-prix="5653" data-dom="La Clusaz – Manigod" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/34000000/33480000/33479000/33478911/180adaa1.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Grand chalet sur les pistes" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;6</span>Grand chalet sur les pistes</h3><span class="where">Manigod – Croix-Fry · La Clusaz – Manigod</span></div>
+    <div class="price"><div class="tot">5 653 €</div><div class="pp">435 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>3</b> salles de bain</span><span><b>9,4/10</b> sur 47 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Au bord des pistes (piste débutants devant le chalet)</p>
+      <p><span class="k">Pour :</span> Départ skis aux pieds, 47 avis, hôte particulier sans aucune annulation. Annulation gratuite jusqu&#x27;au 21 janvier.</p>
+      <p><span class="k">Contre :</span> Domaine plus petit que demandé (125 km). 5 chambres.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p603285" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n7" data-rang="7" data-num="7"data-prix="6583" data-dom="Portes du Soleil" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-49653701/original/ec4e702c-936e-4a43-bdc9-0f73591b2923.jpeg?im_w=720" alt="Photo de l'annonce : Chalet Levant Blanc, jacuzzi" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;7</span>Chalet Levant Blanc, jacuzzi</h3><span class="where">Seytroux (vallée d&#x27;Aulps) · Portes du Soleil</span></div>
+    <div class="price"><div class="tot">6 583 €</div><div class="pp">506 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>7</b> chambres</span><span><b>5</b> salles de bain</span><span><b>5,0/5</b> sur 18 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Pistes à 5 km, village à 1,4 km ; Morzine à environ 15 min</p>
+      <p><span class="k">Pour :</span> 325 m², 7 chambres, 5 salles de bain, salle de jeux. Géré par OVO Network, agence d&#x27;Annecy bien établie. Aussi sur Booking à 6 751 €.</p>
+      <p><span class="k">Contre :</span> Les pistes les plus proches sont celles de Saint-Jean-d&#x27;Aulps (Roc d&#x27;Enfer), pas directement les Portes du Soleil.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/49653701" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n8" data-rang="8" data-num="8"data-prix="7386" data-dom="Évasion Mont-Blanc" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1354218295973426296/original/4dee93de-7aa5-45ec-ad77-7666a7eb1c15.jpeg?im_w=720" alt="Photo de l'annonce : Chalet du Bettex, vue Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;8</span>Chalet du Bettex, vue Mont-Blanc</h3><span class="where">Saint-Gervais – Le Bettex · Évasion Mont-Blanc</span></div>
+    <div class="price"><div class="tot">7 386 €</div><div class="pp">568 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>6</b> chambres</span><span><b>2</b> salles de bain</span><span><b>4,88/5</b> sur 8 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Départ des pistes à 7 min, navette gratuite devant le chalet</p>
+      <p><span class="k">Pour :</span> 250 m² rénovés, dortoir enfants, navette au pied du chalet (pratique pour les ados autonomes).</p>
+      <p><span class="k">Contre :</span> Le titre annonce 5 salles de bain, la fiche en compte 2 : à faire préciser. 3 places de parking seulement.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/1354218295973426296" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n9" data-rang="9" data-num="9"data-prix="7497" data-dom="Grand Massif" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1295776211901495832/original/77a9114f-5638-41af-bdbf-40b9bbe328ee.jpeg?im_w=720" alt="Photo de l'annonce : Chalet Les Pellys, jacuzzi" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;9</span>Chalet Les Pellys, jacuzzi</h3><span class="where">Samoëns · Grand Massif</span></div>
+    <div class="price"><div class="tot">7 497 €</div><div class="pp">577 € par personne</div></div>
+    <div class="meta"><span><b>15</b> couchages</span><span><b>6</b> chambres</span><span><b>6</b> salles de bain</span><span><b>5,0/5</b> sur 3 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Pistes à 2 km, village de Samoëns à 7 km</p>
+      <p><span class="k">Pour :</span> 270 m², une salle de bain par chambre, 16 lits, salle de jeux. Pile dans le budget. Aussi sur Booking à 7 776 €.</p>
+      <p><span class="k">Contre :</span> En pleine nature, loin du village.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/1295776211901495832" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n10" data-rang="10" data-num="10"data-prix="6919" data-dom="Portes du Soleil" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyNzM2MzgxMjExMjYxMTM2OA==/original/798a2fc9-7133-49a9-a1b9-74e4e0d78b09.jpeg?im_w=720" alt="Photo de l'annonce : Chalet Le Cham, au bord du lac de Vonnes" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;10</span>Chalet Le Cham, au bord du lac de Vonnes</h3><span class="where">Châtel · Portes du Soleil</span></div>
+    <div class="price"><div class="tot">6 919 €</div><div class="pp">532 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>2</b> salles de bain</span><span><b>4,6/5</b> sur 5 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> À côté des télésièges du Gabelou et des Portes du Soleil, arrêt navette</p>
+      <p><span class="k">Pour :</span> Remontées et lac à pied : pas de voiture le matin, balades immédiates. Aussi sur Abritel (7 049 €, noté 10/10).</p>
+      <p><span class="k">Contre :</span> 2 salles de bain pour 13.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/1427363812112611368" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n11" data-rang="11" data-num="11"data-prix="7361" data-dom="La Clusaz – Manigod" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI2NjA2NDY5NjA5ODU2ODEwMA%3D%3D/original/e26ef997-c6fa-4204-bbe1-d6862c0d74f0.jpeg?im_w=720" alt="Photo de l'annonce : Chalet avec vue aux Confins" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;11</span>Chalet avec vue aux Confins</h3><span class="where">La Clusaz · La Clusaz – Manigod</span></div>
+    <div class="price"><div class="tot">7 361 €</div><div class="pp">566 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>6</b> chambres</span><span><b>4</b> salles de bain</span><span><b>4,78/5</b> sur 18 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Pistes de la Balme à 2 min, navette gratuite à 300 m</p>
+      <p><span class="k">Pour :</span> Espace nordique des Confins et départs de randonnées à côté.</p>
+      <p><span class="k">Contre :</span> Domaine de 125 km. Centre de La Clusaz à 5 km.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/1266064696098568100" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n12" data-rang="12" data-num="12"data-prix="7741" data-dom="Paradiski" data-fav="0" data-bud="0">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1259108348064795518/original/2a56af41-fa55-4c6d-a967-3362fe009360.jpeg?im_w=720" alt="Photo de l'annonce : Chalet Le Cotaret" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;12</span>Chalet Le Cotaret</h3><span class="where">Bourg-Saint-Maurice · Paradiski</span></div>
+    <div class="price"><div class="tot">7 741 €</div><div class="pp">595 € par personne</div><div class="over">+ 241 € sur le budget</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>5</b> salles de bain</span><span><b>5,0/5</b> sur 3 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Funiculaire des Arcs à 3 min en voiture (8 min de montée)</p>
+      <p><span class="k">Pour :</span> Chalet neuf, 5 salles de bain. Vraie petite ville à 10–15 min à pied (commerces, marché). Aussi sur Abritel à 7 567 €.</p>
+      <p><span class="k">Contre :</span> Ambiance vallée plutôt que station.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/1259108348064795518" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n13" data-rang="13" data-num="13"data-prix="7140" data-dom="Évasion Mont-Blanc" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/100000000/99320000/99319800/99319750/3d0e82dc.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Grand chalet familial, vue Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;13</span>Grand chalet familial, vue Mont-Blanc</h3><span class="where">Saint-Gervais-les-Bains · Évasion Mont-Blanc</span></div>
+    <div class="price"><div class="tot">7 140 €</div><div class="pp">549 € par personne</div></div>
+    <div class="meta"><span><b>15</b> couchages</span><span><b>8</b> chambres</span><span><b>4</b> salles de bain</span><span><b>10/10</b> sur 1 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> À 2 km du centre ; accès aux pistes à préciser</p>
+      <p><span class="k">Pour :</span> 8 chambres dont 4 avec lit double.</p>
+      <p><span class="k">Contre :</span> Un seul avis, distance réelle aux remontées non indiquée.</p>
+    </div>
+    <div class="foot"><span class="piste p2"><i></i>Bleue · à confirmer</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p1323205" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n14" data-rang="14" data-num="14"data-prix="7073" data-dom="Grand Massif" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1777538673718995609/original/d67470ff-0860-41b4-a80b-201f5f4dba0e.jpeg?im_w=720" alt="Photo de l'annonce : Chalet Madeleine, jacuzzi et grand jardin" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;14</span>Chalet Madeleine, jacuzzi et grand jardin</h3><span class="where">Morillon · Grand Massif</span></div>
+    <div class="price"><div class="tot">7 073 €</div><div class="pp">544 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>5</b> salles de bain</span><span>Aucun avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Morillon, distance aux remontées à préciser</p>
+      <p><span class="k">Pour :</span> 230 m², 5 chambres avec chacune sa salle de bain, géré par OVO Network. Aussi sur Booking à 7 337 €.</p>
+      <p><span class="k">Contre :</span> Annonce récente sans avis. OVO limite souvent le nombre d&#x27;adultes : à vérifier avec des ados. 5 grands lits doubles et 2 lits superposés seulement.</p>
+    </div>
+    <div class="foot"><span class="piste p2"><i></i>Bleue · à confirmer</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/1777538673718995609" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n15" data-rang="15" data-num="15"data-prix="6194" data-dom="Évasion Mont-Blanc" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-41638445/original/574e7d86-0c3a-4bfa-a1d6-a04340fcaa73.jpeg?im_w=720" alt="Photo de l'annonce : Chalet Grand Cerf du Bois" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;15</span>Chalet Grand Cerf du Bois</h3><span class="where">Les Houches · Évasion Mont-Blanc</span></div>
+    <div class="price"><div class="tot">6 194 €</div><div class="pp">476 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>3</b> salles de bain</span><span><b>4,85/5</b> sur 94 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Chamonix à 6 min ; remontées des Houches en voiture</p>
+      <p><span class="k">Pour :</span> L&#x27;annonce la plus éprouvée de la liste : 94 avis, superhôte.</p>
+      <p><span class="k">Contre :</span> Les Houches n&#x27;est pas relié skis aux pieds au reste (55 km de pistes sur place).</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/41638445" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n16" data-rang="16" data-num="16"data-prix="7383" data-dom="Paradiski" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/65000000/64480000/64475700/64475665/f3651834.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Chalet Les Gentianes Bleues" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;16</span>Chalet Les Gentianes Bleues</h3><span class="where">Champagny-en-Vanoise · Paradiski</span></div>
+    <div class="price"><div class="tot">7 383 €</div><div class="pp">568 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>5</b> chambres</span><span><b>1</b> salle de bain</span><span><b>9,4/10</b> sur 16 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Proche de la télécabine de Champagny</p>
+      <p><span class="k">Pour :</span> Village de Champagny, accès direct à La Plagne.</p>
+      <p><span class="k">Contre :</span> La fiche n&#x27;affiche qu&#x27;une salle de bain : à faire confirmer.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p1968137" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n17" data-rang="17" data-num="17"data-prix="3137" data-dom="Alpe d&#x27;Huez" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-749032031757651456/original/4f43ad9d-7fa8-4369-a467-6bd643ffacf1.jpeg?im_w=720" alt="Photo de l'annonce : Chalet familial, 13 couchages" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;17</span>Chalet familial, 13 couchages</h3><span class="where">La Garde-en-Oisans · Alpe d&#x27;Huez</span></div>
+    <div class="price"><div class="tot">3 137 €</div><div class="pp">241 € par personne</div></div>
+    <div class="meta"><span><b>13</b> couchages</span><span><b>5</b> chambres</span><span><b>2</b> salles de bain</span><span><b>4,84/5</b> sur 37 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Alpe d&#x27;Huez à 15 min en voiture</p>
+      <p><span class="k">Pour :</span> Moins de la moitié du budget pour 250 m², superhôte.</p>
+      <p><span class="k">Contre :</span> 13 couchages pile, 2 salles de bain. Route des 21 virages chaque matin, trajet le plus long depuis Strasbourg.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/749032031757651456" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n18" data-rang="18" data-num="18"data-prix="6631" data-dom="Portes du Soleil" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-45286894/original/58834657-1efc-4a93-a25e-8f07834422e7.jpeg?im_w=720" alt="Photo de l'annonce : Chalet La Pala, spa privé" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;18</span>Chalet La Pala, spa privé</h3><span class="where">Val-d&#x27;Illiez (Suisse) · Portes du Soleil</span></div>
+    <div class="price"><div class="tot">6 631 €</div><div class="pp">510 € par personne</div></div>
+    <div class="meta"><span><b>13</b> couchages</span><span><b>5</b> chambres</span><span><b>2</b> salles de bain</span><span><b>4,97/5</b> sur 67 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Gare et commerces à 300 m ; remontées de Champéry / Les Crosets en voiture ou train</p>
+      <p><span class="k">Pour :</span> Le plus proche de Strasbourg (≈ 3 h 45). Village avec gare, côté suisse des Portes du Soleil.</p>
+      <p><span class="k">Contre :</span> 130 m² pour 13 et une seule place de parking : très serré.</p>
+    </div>
+    <div class="foot"><span class="piste p1"><i></i>Verte · éprouvée</span><span class="tag">Nouvelle</span><a href="https://www.airbnb.fr/rooms/45286894" target="_blank" rel="noopener">Voir sur Airbnb</a></div>
+  </div>
+</article>
+<article class="card" id="n19" data-rang="19" data-num="19"data-prix="7121" data-dom="Les Sybelles" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/92000000/91870000/91863900/91863846/8628f07f.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Chalet Le Bourrier" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;19</span>Chalet Le Bourrier</h3><span class="where">Saint-Sorlin-d&#x27;Arves · Les Sybelles</span></div>
+    <div class="price"><div class="tot">7 121 €</div><div class="pp">548 € par personne</div></div>
+    <div class="meta"><span><b>26</b> couchages</span><span><b>9</b> chambres</span><span><b>5</b> salles de bain</span><span><b>8,0/10</b> sur 1 avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Dans le village-station</p>
+      <p><span class="k">Pour :</span> 9 chambres et 26 couchages : de la place pour tout le monde, au cœur du village-station, sous le budget.</p>
+      <p><span class="k">Contre :</span> Hôte peu fiable sur le papier : 15 % d&#x27;annulations de son fait, 53 % de demandes acceptées. Un seul avis.</p>
+    </div>
+    <div class="foot"><span class="piste p2"><i></i>Bleue · à confirmer</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p2226562" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n20" data-rang="20" data-num="20"data-prix="5775" data-dom="Paradiski" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/115000000/114410000/114403900/114403813/c6fe1dcd.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Grand chalet montagnard avec jardin" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;20</span>Grand chalet montagnard avec jardin</h3><span class="where">Champagny-en-Vanoise · Paradiski</span></div>
+    <div class="price"><div class="tot">5 775 €</div><div class="pp">444 € par personne</div></div>
+    <div class="meta"><span><b>14</b> couchages</span><span><b>6</b> chambres</span><span><b>3</b> salles de bain</span><span>Aucun avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> Proche de la télécabine de Champagny</p>
+      <p><span class="k">Pour :</span> 6 chambres et 3 salles de bain à un bon prix pour Paradiski.</p>
+      <p><span class="k">Contre :</span> Aucun avis : ne rien engager sans échange avec l&#x27;hôte et vérification de l&#x27;adresse.</p>
+    </div>
+    <div class="foot"><span class="piste p3"><i></i>Rouge · à contrôler</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p2531427" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article>
+<article class="card" id="n21" data-rang="21" data-num="21"data-prix="4428" data-dom="Espace Diamant" data-fav="0" data-bud="1">
+  <div class="ph"><img src="https://media.vrbo.com/lodging/137000000/136190000/136180900/136180854/367c4edf.jpg?impolicy=resizecrop&amp;rw=598&amp;ra=fit" alt="Photo de l'annonce : Grand chalet 15 personnes, isolé" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true"></div>
+  <div class="in">
+    <div class="head"><h3><span class="rank">N°&nbsp;21</span>Grand chalet 15 personnes, isolé</h3><span class="where">Hauteluce (Les Saisies) · Espace Diamant</span></div>
+    <div class="price"><div class="tot">4 428 €</div><div class="pp">341 € par personne</div></div>
+    <div class="meta"><span><b>15</b> couchages</span><span><b>7</b> chambres</span><span><b>5</b> salles de bain</span><span>Aucun avis</span></div>
+    <div class="body">
+      <p><span class="k">Pistes :</span> À 3,2 km de Hauteluce ; Les Saisies à environ 15 min</p>
+      <p><span class="k">Pour :</span> 7 chambres et 5 salles de bain pour 341 € par personne.</p>
+      <p><span class="k">Contre :</span> Annonce toute neuve, aucun avis, hôte professionnel sans nom affiché, prix bas pour la prestation : le profil type à contrôler.</p>
+    </div>
+    <div class="foot"><span class="piste p3"><i></i>Rouge · à contrôler</span><span class="tag">Nouvelle</span><a href="https://www.abritel.fr/location-vacances/p20323096a" target="_blank" rel="noopener">Voir sur Abritel</a></div>
+  </div>
+</article></div>
+    <p class="note">Prix totaux affichés par les plateformes pour 13 personnes sur la semaine, frais de service compris ; la taxe de séjour peut s'ajouter. <span class="noprint">Les photos viennent directement des annonces.</span><span class="printonly">Photos et détails : lien « Voir sur… » de chaque fiche.</span></p>
+  </section>
+  <section>
+    <h2>Les domaines skiables</h2>
+    <div class="tblwrap"><table><thead><tr><th>Domaine</th><th>Taille</th><th>Route (estimation, hors bouchons)</th><th>Déjà skié</th></tr></thead><tbody><tr><td><b>Portes du Soleil</b></td><td>≈ 600 km, 12 stations FR/CH</td><td>Strasbourg ≈ 4 h 30 · Pas-de-Calais ≈ 8 h 30</td><td>Châtel</td></tr><tr><td><b>Grand Massif</b></td><td>265 km, 5 stations</td><td>Strasbourg ≈ 4 h 45 · Pas-de-Calais ≈ 8 h 15</td><td>Les Carroz</td></tr><tr><td><b>Évasion Mont-Blanc</b></td><td>≈ 400 km (Saint-Gervais, Megève, Combloux…)</td><td>Strasbourg ≈ 5 h · Pas-de-Calais ≈ 8 h 30</td><td>Combloux, Les Houches</td></tr><tr><td><b>Paradiski</b></td><td>425 km (La Plagne, Les Arcs)</td><td>Strasbourg ≈ 6 h · Pas-de-Calais ≈ 9 h</td><td>Montalbert</td></tr><tr><td><b>Les 3 Vallées</b></td><td>≈ 600 km</td><td>Strasbourg ≈ 5 h 45 · Pas-de-Calais ≈ 8 h 45</td><td>—</td></tr><tr><td><b>La Clusaz – Manigod</b></td><td>125 km (Grand-Bornand non relié)</td><td>Strasbourg ≈ 5 h · Pas-de-Calais ≈ 8 h</td><td>—</td></tr><tr><td><b>Les Sybelles</b></td><td>310 km, 6 stations</td><td>Strasbourg ≈ 6 h 15 · Pas-de-Calais ≈ 9 h</td><td>—</td></tr><tr><td><b>Alpe d&#x27;Huez</b></td><td>250 km</td><td>Strasbourg ≈ 6 h 15 · Pas-de-Calais ≈ 8 h 45</td><td>—</td></tr><tr><td><b>Espace Diamant</b></td><td>192 km (Les Saisies, Crest-Voland…)</td><td>Strasbourg ≈ 5 h 30 · Pas-de-Calais ≈ 8 h 30</td><td>—</td></tr></tbody></table></div>
+  </section>
+  <section><h2>Autres pistes regardées</h2><ul><li><b>Gîtes de France Haute-Savoie</b> : les quatre grands gîtes de 13 à 15 places (Châtel, Les Gets, Le Grand-Bornand, La Clusaz) sont déjà réservés cette semaine-là.</li><li><b>Gîtes de France Savoie</b> : le gîte La Tête de Mule à Crest-Voland (15 places, 7 chambres, 5/5 sur 51 avis, Espace Diamant) n&#x27;affiche ni prix ni disponibilité en ligne : à demander par leur formulaire.</li><li><b>Booking</b> : peu de grands chalets et presque tous déjà vus ailleurs ; utile surtout pour comparer les prix d&#x27;une même annonce.</li><li><b>Châtel Réservation (centrale de l&#x27;office de tourisme)</b> : 4 hébergements disponibles pour 13 sur ces dates, à consulter sur chatelreservation.com ; remise de 10 % annoncée sur une sélection pour toute réservation hiver avant le 15 octobre 2026.</li></ul></section>
+  <section><h2>Écartées</h2><ul><li><b>Chalet Coco, Les Carroz (Airbnb, 7 391 €)</b> : limité à 10 adultes ; avec des ados de 11 à 17 ans, ça ne passe pas.</li><li><b>Datcha of Sky, Les Houches (5 381 €)</b> : noté 4,44/5 et 2 salles de bain pour 9 chambres.</li><li><b>Chalet Plein Sud, Verchaix (5 384 €)</b> : noté 4,29/5 sur 41 avis.</li><li><b>Chalet La Plagne, Aime (6 159 €)</b> : prix barré de 12 165 € peu crédible et note de 4,48/5.</li><li><b>Chalet rénové, Cordon (7 603 €)</b> : noté 6/10.</li><li><b>Morzine et Montriond au-delà de 8 000 €</b> : rien de mieux que les annonces retenues, pour plus cher.</li></ul></section>
+  <section>
+    <h2>Fiabilité</h2>
+    <ul>
+      <li>Chaque annonce a été ouverte sur sa plateforme avec les dates du séjour : capacité, prix et disponibilité sont ceux affichés le jour de la mise à jour.</li>
+      <li>Aucune annonce retenue ne demande de contact ou de paiement hors plateforme. Les annonces rouges n'ont pas d'avis : ne rien verser tant que l'hôte n'a pas répondu et que l'adresse n'est pas recoupée.</li>
+      <li>La semaine tombe sur les vacances des zones A et B : c'est la plus demandée de l'hiver, les bonnes annonces partent tôt.</li>
+    </ul>
+  </section>
+</div>
+<script>
+(function(){
+  var list=document.getElementById('list'); if(!list) return;
+  var cards=[].slice.call(list.children), f='all', tri='rang';
+  function go(){
+    var n=0;
+    cards.forEach(function(c){var ok=f==='all'||(f==='fav'&&c.dataset.fav==='1')||(f==='bud'&&c.dataset.bud==='1');c.hidden=!ok;if(ok)n++;});
+    cards.slice().sort(function(a,b){
+      if(tri==='prix') return a.dataset.prix-b.dataset.prix;
+      if(tri==='num') return a.dataset.num-b.dataset.num;
+      if(tri==='dom') return a.dataset.dom.localeCompare(b.dataset.dom)||a.dataset.rang-b.dataset.rang;
+      return a.dataset.rang-b.dataset.rang;
+    }).forEach(function(c){list.appendChild(c);});
+    document.getElementById('count').textContent=n+' annonce'+(n>1?'s':'');
+  }
+  document.getElementById('controls').hidden=false;
+  [].forEach.call(document.querySelectorAll('.chip'),function(b){b.addEventListener('click',function(){
+    f=b.dataset.f;[].forEach.call(document.querySelectorAll('.chip'),function(x){x.setAttribute('aria-pressed',x===b);});go();});});
+  document.getElementById('tri').addEventListener('change',function(ev){tri=ev.target.value;go();});
+  go();
+})();
+</script>
+
+</body>
+</html>
